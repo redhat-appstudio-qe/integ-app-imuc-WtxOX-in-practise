@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-azul
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/nbe-e2e-nzko-tenant/integ-app-imuc/hacbs-test-project-azul@sha256:8bfdf95350d57acf887a417570e6a643845fdd71dbd2f9196a3652e52b2708e8
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
